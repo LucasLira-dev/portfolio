@@ -25,12 +25,12 @@ const myProjects = [
         tecnologies: ["React", "Tailwind CSS", "HTML", "CSS"]
     },
     {
-        title: "mediLembrete",
-        description: "Site que ajuda pessoas a se lembrarem de tomar seus medicamentos, com funcionalidades de editar e excluir medicamentos.",
-        image: "/mediLembrete.png",
-        demoLink: "https://medi-lembrete.vercel.app/",
-        codeLink: "https://github.com/LucasLira-dev/MediLembrete",
-        tecnologies: ["NextJs", "Tailwind CSS", "NodeJs", "mySQL"]
+        title: "Codenotes",
+        description: "Aplicação de anotações focada em desenvolvedores, onde o usuário pode salvar suas anotações junto com trechos de código e sua respectiva linguagem.",
+        image: "/codenotes.png",
+        demoLink: "https://codenotes-wheat.vercel.app/",
+        codeLink: "https://github.com/LucasLira-dev/codenotes",
+        tecnologies: ["NextJs", "Tailwind CSS", "NestJs", "PostgreSQL"]
     },
     {
         title: "Spotify",
