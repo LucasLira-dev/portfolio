@@ -17,12 +17,12 @@ const myProjects = [
         tecnologies: ["NextJs", "Tailwind CSS", "NestJs", "TypeOrm"]
     },
     {
-        title: "youCourse",
-        description: "Projeto que visa facilitar o aprendizado de programação, apresentando cursos gratuitos que estão disponíveis no YouTube.",
-        image: "/youCourse.png",   
-        demoLink: "https://youcourse-ivory.vercel.app/",
-        codeLink: "https://github.com/LucasLira-dev/youcourse.",
-        tecnologies: ["React", "Tailwind CSS", "HTML", "CSS"]
+        title: "EnglishTalkAI",
+        description: "Plataforma de aprendizado de inglês com IA, onde o usuário pode praticar conversação em inglês com um assistente virtual alimentado por IA.",
+        image: "/englishTalkAI.png",
+        demoLink: "https://english-talk-ai.vercel.app/",
+        codeLink: "https://github.com/LucasLira-dev/englishTalkAI",
+        tecnologies: ["NextJs", "Tailwind CSS", "NestJs", "TypeOrm"]
     },
     {
         title: "Codenotes",
@@ -33,12 +33,12 @@ const myProjects = [
         tecnologies: ["NextJs", "Tailwind CSS", "NestJs", "PostgreSQL"]
     },
     {
-        title: "Spotify",
-        description: "Recriando a interface do Spotify, com responsividade e funcionalidades básicas.",
-        image: "/spotify.png",
-        demoLink: "https://lucaslira-dev.github.io/spotify/",
-        codeLink: "https://github.com/LucasLira-dev/spotify",
-        tecnologies: ["HTML", "CSS", "JavaScript"]
+        title: "youCourse",
+        description: "Projeto que visa facilitar o aprendizado de programação, apresentando cursos gratuitos que estão disponíveis no YouTube.",
+        image: "/youCourse.png",   
+        demoLink: "https://youcourse-ivory.vercel.app/",
+        codeLink: "https://github.com/LucasLira-dev/youcourse.",
+        tecnologies: ["React", "Tailwind CSS"]
     },
     {
         title: "TechNews",
