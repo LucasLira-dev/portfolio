@@ -104,10 +104,10 @@ export const Projects = () => {
                <p className="text-[var(--muted-foreground)] text-md px-4 w-full">
                 {project.description}
               </p>
-              <ul className="list-inside list-none flex flex-wrap gap-3 text-lg text-white font-semibold text-[12px] w-full p-4">
+              <ul className="list-inside list-none flex flex-wrap gap-3 text-lg text-[#00C6C4] font-semibold text-[12px] w-full p-4">
                 {project.tecnologies && project.tecnologies.map((tecnology) => (
                   <li
-                    className="flex items-center gap-2 bg-[#27272A] rounded-lg px-3 py-1 hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors duration-300"
+                    className="flex items-center gap-2 bg-[#172E3F] rounded-lg px-3 py-1 hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors duration-300"
                     key={tecnology}
                   >
                     {tecnology}

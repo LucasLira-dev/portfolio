@@ -72,7 +72,7 @@ export default function Contatos() {
                             {contact.arroba}
                         </p>
                         <Link
-                        className="text-white flex items-center gap-3 px-4 py-1 rounded-lg border-1 border-[var(--border)] hover:bg-[#27272A] hover:opacity-90 transition-colors duration-300 justify-center"
+                        className="text-white flex items-center gap-3 px-4 py-1 rounded-lg border-1 border-[var(--border)] hover:bg-cyan-500/10 hover:text-cyan-400 transition-colors duration-300 justify-center"
                         href={contact.contactLink}
                         target="_blank"
                         >

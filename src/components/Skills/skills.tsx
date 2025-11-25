@@ -1,133 +1,66 @@
-"use client";
+import { Code2, Server, Wrench, Lightbulb } from "lucide-react";
 
-import { FiLayout } from "react-icons/fi";
-import { LuServer } from "react-icons/lu";
-import { FaCode } from "react-icons/fa6";
-import { CiGlobe } from "react-icons/ci";
-
-import { TiHtml5 } from "react-icons/ti";
-import {
-  FaCss3Alt,
-  FaGitAlt,
-  FaGithub,
-  FaNodeJs,
-  FaReact,
-  FaPuzzlePiece,
-  FaJsSquare,
-} from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-
-import { SiNestjs } from "react-icons/si";
-
-import { VscVscode } from "react-icons/vsc";
-import { DiNpm } from "react-icons/di";
-
-import { MdOutlineDesignServices, MdSpeed } from "react-icons/md";
-
-import { motion } from "framer-motion";
-
-const skills = [
+const skillsData = [
   {
-    title: "Front-End",
-    icon: <FiLayout />,
-    abilities: [
-      { name: "HTML", icon: <TiHtml5 /> },
-      { name: "CSS", icon: <FaCss3Alt /> },
-      { name: "JavaScript", icon: <IoLogoJavascript /> },
-      { name: "React", icon: <FaReact /> },
-      { name: "Next.js", icon: <RiNextjsFill /> },
-      { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
-    ],
+    category: "Front-End",
+    icon: Code2,
+    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"],
   },
   {
-    title: "Back-End",
-    icon: <LuServer />,
-    abilities: [
-      { name: "Node.js", icon: <FaNodeJs /> },
-      { name: "Express", icon: <FaNodeJs /> },
-      { name: "NestJS", icon: <SiNestjs /> },
-    ],
+    category: "Back-End",
+    icon: Server,
+    skills: ["Node.js", "Express", "NestJS"],
   },
   {
-    title: "Ferramentas",
-    icon: <FaCode />,
-    abilities: [
-      { name: "Git", icon: <FaGitAlt /> },
-      { name: "GitHub", icon: <FaGithub /> },
-      { name: "VScode", icon: <VscVscode /> },
-      { name: "Npm", icon: <DiNpm /> },
-    ],
+    category: "Ferramentas",
+    icon: Wrench,
+    skills: ["Git", "GitHub", "VScode", "Npm"],
   },
   {
-    title: "Conceitos",
-    icon: <CiGlobe />,
-    abilities: [
-      {
-        name: "Responsive Design",
-        icon: <MdOutlineDesignServices />,
-      },
-      {
-        name: "Component Architecture",
-        icon: <FaPuzzlePiece />,
-      },
-      {
-        name: "Modern JavaScript",
-        icon: <FaJsSquare />,
-      },
-      {
-        name: "Web Performance",
-        icon: <MdSpeed />,
-      },
-    ],
+    category: "Conceitos",
+    icon: Lightbulb,
+    skills: ["Responsive Design", "Component Architecture", "Modern JavaScript", "Web Performance"],
   },
 ];
 
-export default function Skills() {
+export default function SkillsS() {
   return (
-    <div 
-    className="flex flex-col items-center justify-center p-2 bg-[var(--background)]"
-    id="habilidades">
-      <h2 className="text-4xl text-white font-bold mt-10 mb-6">
-        Minhas Habilidades
-      </h2>
-      <div className="w-20 h-1 bg-[var(--primary)] mx-auto mb-6"></div>
+    <section id="habilidades" className="py-20 bg-slate-900/20">
+      <div className="container mx-auto px-4 ">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-[var(--foreground)]">
+          Minhas Habilidades
+        </h2>
 
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7 }}
-        className="w-full flex items-center justify-center p-3 sm:p-5 lg:p-10 xl:p-12 2xl:p-14"
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 sm:gap-8 w-full justify-center items-center">
-          {skills.map((skill) => (
-            <div
-              key={skill.title}
-              className="bg-[var(--card)] rounded-lg h-full min-w-[330px] sm:w-[340px] md:w-[360px] lg:w-[400px] xl:w-[350px] 2xl:w-[350px] gap-2 p-6"
-            >
-              <div className="inline-block mr-2 text-[var(--primary)] text-[30px] mb-4">
-                {skill.icon}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {skillsData.map((skillGroup) => {
+            const Icon = skillGroup.icon;
+            return (
+              <div
+                key={skillGroup.category}
+                className="p-6 bg-background border border-border rounded-lg hover:border-cyan-500/50 transition-colors"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Icon className="w-6 h-6 text-cyan-500" />
+                  <h3 className="text-xl font-bold text-[var(--foreground)]">
+                    {skillGroup.category}
+                  </h3>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {skillGroup.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full text-sm font-medium border border-cyan-500/20"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-2xl text-[var(--card-foreground)] text-center font-semibold mb-4">
-                {skill.title}
-              </h3>
-              <ul className="list-inside list-none p-2 flex flex-col gap-4 text-lg text-white font-semibold max-w">
-                {skill.abilities.map((ability) => (
-                  <li
-                    className="flex items-center gap-2"
-                    key={ability.icon.type.name}
-                  >
-                    {ability.icon}
-                    {ability.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   );
 }
