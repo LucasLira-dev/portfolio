@@ -16,7 +16,7 @@ const skills = {
 
 export default function SkillsS() {
   return (
-    <section id="habilidades" className="min-h-screen flex items-center md:ml-64 px-4 md:px-8 py-20">
+    <section id="habilidades" className="min-h-screen flex items-center text-center lg:ml-64 px-4 lg:px-8 py-20">
       <div className="max-w-4xl mx-auto w-full">
         <h2 className="text-5xl font-bold mb-12 text-[#e8eaed]">Habilidades</h2>
 

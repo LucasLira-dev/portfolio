@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="sobre" className="min-h-screen flex items-center md:ml-64 px-4 md:px-8 py-20">
+    <section id="sobre" className="min-h-screen flex items-center text-center lg:ml-64 px-4 lg:px-8 py-20">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-5xl font-bold mb-12 text-[#e8eaed]">Sobre Mim</h2>
           <div className="space-y-6 text-lg text-[#a8aeb5] leading-relaxed">

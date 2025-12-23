@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Contatos() {
     return(
-        <section id="contatos" className="min-h-screen flex items-center md:ml-64 px-4 md:px-8 py-20">
+        <section id="contatos" className="min-h-screen flex items-center lg:ml-64 px-4 lg:px-8 py-20">
         <div className="max-w-3xl mx-auto w-full">
           <h2 className="text-5xl font-bold mb-12 text-[#e8eaed]">Entre em contato</h2>
 

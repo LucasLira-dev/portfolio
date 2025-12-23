@@ -9,7 +9,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 const myProjects = [
     {
         title: "TipMeUnderground",
-        description: "PLataforma de exposição de redes sociais, onde o usuário pode adicionar suas redes sociais e receber doações.",
+        description: "PLataforma de exposição de redes sociais, onde o usuário pode adicionar suas redes sociais e receber doações. Ideal para criadores de conteúdo underground.",
         image: "/tipme.png",
         demoLink: "https://tipmeunderground.vercel.app/",
         codeLink: "https://github.com/LucasLira-dev/tipmeunderground",
@@ -49,7 +49,7 @@ const myProjects = [
     },
     {
         title: "TechNews",
-        description: "Projeto de notícias sobre tecnologia, onde o usuário pode ler as últimas notícias do mundo da tecnologia.",
+        description: "Projeto de noticias sobre tecnologia, onde o usuário pode se manter atualizado com as últimas novidades do mundo tech.",
         image: "/techNews.png",
         demoLink: "https://lucaslira-dev.github.io/LucasTech/",
         codeLink: "https://github.com/LucasLira-dev/LucasTech",
@@ -60,11 +60,11 @@ const myProjects = [
 export const Projects = () => {
 
     const [showAll, setShowAll] = useState(false);
-    const displayedProjects = showAll ? myProjects : myProjects.slice(0, 3); //corta os projetos para exibir apenas os 3 primeiros se showAll for false
+    const displayedProjects = showAll ? myProjects : myProjects.slice(0, 4); //corta os projetos para exibir apenas os 4 primeiros se showAll for false
 
 
     return(
-      <section id="projetos" className="min-h-screen flex items-center md:ml-64 px-4 md:px-8 py-20">
+      <section id="projetos" className="min-h-screen flex items-center lg:ml-64 px-4 lg:px-8 py-20 text-center">
         <div className="max-w-4xl mx-auto w-full">
           <h2 className="text-5xl font-bold mb-12 text-[#e8eaed]">Meus Projetos</h2>
 

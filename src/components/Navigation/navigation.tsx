@@ -27,7 +27,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:fixed md:left-0 md:top-0 md:h-screen md:w-64 md:flex md:flex-col md:bg-gradient-to-b md:from-[#1a1f26] md:to-[#0f1419] md:border-r md:border-[#2a3038] md:p-8 md:z-40">
+      <nav className="hidden lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-64 lg:flex lg:flex-col lg:bg-gradient-to-b lg:from-[#1a1f26] lg:to-[#0f1419] lg:border-r lg:border-[#2a3038] lg:p-8 lg:z-40">
         <div className="mb-12">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-[#00d4ff] to-[#1e88e5] bg-clip-text text-transparent">
             Lucas
@@ -87,7 +87,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
       </nav>
 
       {/* Mobile Navigation */}
-      <div className="md:hidden fixed top-0 left-0 right-0 bg-[#1a1f26] border-b border-[#2a3038] px-4 py-4 z-50 flex justify-between items-center">
+      <div className="lg:hidden fixed top-0 left-0 right-0 bg-[#1a1f26] border-b border-[#2a3038] px-4 py-4 z-50 flex justify-between items-center">
         <h1 className="text-xl font-bold bg-gradient-to-r from-[#00d4ff] to-[#1e88e5] bg-clip-text text-transparent">
           Lucas
         </h1>
@@ -101,7 +101,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed top-16 left-0 right-0 bg-[#1a1f26] border-b border-[#2a3038] p-4 z-40 space-y-2">
+        <div className="lg:hidden fixed top-16 left-0 right-0 bg-[#1a1f26] border-b border-[#2a3038] p-4 z-40 space-y-2">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -115,7 +115,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
       )}
 
       {/* Spacer for desktop */}
-      <div className="hidden md:block md:w-64" />
+      <div className="hidden lg:block lg:w-64" />
     </>
   );
 }

@@ -40,7 +40,7 @@ export default function Home() {
       <Navigation activeSection={activeSection} />
       <section
         id="inicio"
-        className="min-h-screen flex items-center justify-center md:ml-64 px-4 md:px-8 relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center lg:ml-64 px-4 lg:px-8 relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-10">
           <Image
@@ -51,7 +51,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 max-w-2xl mx-auto text-center md:text-left">
+        <div className="relative z-10 max-w-2xl mx-auto text-center lg:text-left">
           <div className="animate-fade-in-up">
             <p className="text-[#00d4ff] font-semibold text-lg mb-4">Olá, eu sou</p>
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#e8eaed] to-[#a8aeb5] bg-clip-text text-transparent">
@@ -60,7 +60,7 @@ export default function Home() {
             <p className="text-2xl md:text-3xl text-[#a8aeb5] mb-8">
               Desenvolvedor Front-end apaixonado por criar soluções web modernas
             </p>
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div className="flex gap-4 justify-center lg:justify-start">
               <button
                 onClick={() => document.getElementById('projetos')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-3 bg-[#00d4ff] text-[#0f1419] font-semibold rounded-lg hover:shadow-lg hover:shadow-[#00d4ff]/50 transition-all duration-300 flex items-center gap-2"
