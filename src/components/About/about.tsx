@@ -1,35 +1,20 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function About() {
   return (
-    <div 
-    className="flex flex-col items-center justify-center p-8 bg-[rgba(30,41,59,0.3)]"
-    id="sobre">
-      <h1 className="text-4xl text-white font-bold mb-4 mt-10">Sobre Mim</h1>
-      <div className="w-20 h-1 bg-[var(--primary)] mx-auto mb-5"></div>
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.7 }}
-      >
-        <p className="text-lg text-white font-semibold max-w-2xl text-center mb-6">
-          Sou um desenvolvedor apaixonado por criar soluções web modernas e
-          eficientes. Tenho experiência sólida em desenvolvimento front-end com
-          React e Next.js, e conhecimentos em back-end com Node.js. Atualmente
-          estou expandindo minhas habilidades aprendendo NestJS para
-          desenvolvimento de APIs mais robustas.
-        </p>
-        <p className="text-lg text-white font-semibold max-w-2xl text-center mb-10">
-          Minha jornada na programação me levou a dominar tecnologias como HTML,
-          CSS, JavaScript, React, Next.js e Tailwind CSS. Estou sempre em busca
-          de novos desafios e oportunidades para crescer profissionalmente,
-          especialmente em projetos que envolvam arquiteturas modernas e boas
-          práticas de desenvolvimento.
-        </p>
-      </motion.div>
-    </div>
+    <section id="sobre" className="min-h-screen flex items-center md:ml-64 px-4 md:px-8 py-20">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-5xl font-bold mb-12 text-[#e8eaed]">Sobre Mim</h2>
+          <div className="space-y-6 text-lg text-[#a8aeb5] leading-relaxed">
+            <p className="animate-fade-in-up">
+              Sou um desenvolvedor apaixonado por criar soluções web modernas e eficientes. Tenho experiência sólida em desenvolvimento front-end com React e Next.js, e conhecimentos em back-end com NestJS. Atualmente estou expandindo minhas habilidades aprendendo sobre criação de agentes de IA com Langchain/Langgraph usando Python.
+            </p>
+            <p className="animate-fade-in-up">
+              Minha jornada na programação me levou a dominar tecnologias como HTML, CSS, JavaScript, React, Next.js e Tailwind CSS. Estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente, especialmente em projetos que envolvam arquiteturas modernas e boas práticas de desenvolvimento.
+            </p>
+            <p className="text-[#e8eaed] font-semibold mt-8">
+              📍 Localização: Ceará, Brasil
+            </p>
+          </div>
+        </div>
+      </section>
   );
 }

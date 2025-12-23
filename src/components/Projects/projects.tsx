@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react"
@@ -23,6 +22,14 @@ const myProjects = [
         demoLink: "https://english-talk-ai.vercel.app/",
         codeLink: "https://github.com/LucasLira-dev/englishTalkAI",
         tecnologies: ["NextJs", "Tailwind CSS", "NestJs", "TypeOrm"]
+    },
+    {
+      title: "AI-Agents-hub",
+      description: "5 agentes de IA diferentes que executam tarefas distintas, como realizar pesquisas na web, gerar diagrama, analisar gastos financeiros e muito mais.",
+      image: "/aiAgentHub.png",
+      demoLink: "https://ai-agent-hub-self.vercel.app/",
+      codeLink: "https://github.com/LucasLira-dev/ai-agent-hub",
+      tecnologies: ["TypeScript", "NextJs", "Tailwind CSS", "Vercel AI SDK"]
     },
     {
         title: "Codenotes",
@@ -56,87 +63,75 @@ export const Projects = () => {
     const displayedProjects = showAll ? myProjects : myProjects.slice(0, 3); //corta os projetos para exibir apenas os 3 primeiros se showAll for false
 
 
-
     return(
-        <section
-        className="flex flex-col items-center justify-center p-2 md:p-4 bg-[rgba(30,41,59,0.3)] w-full "
-        id="projetos">
-            <h2
-            className="text-4xl text-white font-bold mt-10 mb-6">
-                Meus Projetos
-            </h2>
-            <div className="w-20 h-1 bg-[var(--primary)] mx-auto mb-6"></div>
-            <p
-            className="text-[var(--muted-foreground)] text-[20px] max-w-2xl text-center mb-6">
-                Aqui estão alguns dos projetos que desenvolvi. Cada um representa diferentes habilidades e tecnologias que domino.
-            </p>
+      <section id="projetos" className="min-h-screen flex items-center md:ml-64 px-4 md:px-8 py-20">
+        <div className="max-w-4xl mx-auto w-full">
+          <h2 className="text-5xl font-bold mb-12 text-[#e8eaed]">Meus Projetos</h2>
 
-            <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.7 }}
-            className="w-full flex items-center p-3"
-            >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8 justify-center rounded-lg border-[var(--border)] shadow-lg w-full">
-          {displayedProjects.map((project) => (
-            <div
-              key={project.title}
-             className="bg-[var(--card)] border-2 border-[var(--border)] rounded-lg sm:w-[355px] md:w-[330px] lg:w-[390px] xl:w-[400px] 2xl:w-[440px] w-full min-w-[320px] min-h-[440px] gap-2 flex flex-col overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              <div className="relative h-[210px] w-full overflow-hidden">
-                <Image
-                  src={project.image}
-                  width={420}
-                  height={200}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-                  style={{
-                    width: '100%',
-                    height: '200px',
-                    objectFit: 'cover'
-                  }}
-                />           
-            </div>
-              <h3 className="text-2xl text-[var(--card-foreground)] font-semibold pl-4 w-full">
-                {project.title}
-              </h3>
-               <p className="text-[var(--muted-foreground)] text-md px-4 w-full">
-                {project.description}
-              </p>
-              <ul className="list-inside list-none flex flex-wrap gap-3 text-lg text-[#00C6C4] font-semibold text-[12px] w-full p-4">
-                {project.tecnologies && project.tecnologies.map((tecnology) => (
-                  <li
-                    className="flex items-center gap-2 bg-[#172E3F] rounded-lg px-3 py-1 hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors duration-300"
-                    key={tecnology}
-                  >
-                    {tecnology}
-                  </li>
-                ))}
-              </ul>
+          <div className="grid md:grid-cols-2 gap-6">
+            {displayedProjects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-[#1a1f26] border border-[#2a3038] rounded-lg overflow-hidden hover:border-[#00d4ff] transition-all duration-300 group"
+              >
+                <div className="relative h-40 bg-gradient-to-br from-[#252d36] to-[#1a1f26] overflow-hidden">
+                  <Image
+                    width={400}
+                    height={160}
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1f26] to-transparent" />
+                </div>
 
-              <div className="flex gap-2 p-4 font-semibold text-md w-full">
-                <Link href={project.codeLink} target="_blank"
-                  className=" text-white border-1 border-[var(--border)] flex items-center gap-3 px-3 py-1 rounded-lg hover:bg-[#27272A] transition-colors duration-300">
-                    <FiGithub className="text-md" />
-                    Github
-                </Link>
-                <Link href={project.demoLink} target="_blank"
-                  className="bg-[var(--primary)] text-black flex items-center gap-3 px-3 py-1 rounded-lg border-1 hover:bg-[#fafafa] hover:opacity-90 hover:text-[#1a1a1b] transition-colors duration-300">
-                    <FiExternalLink className="text-md" />
-                    Demo
-                </Link>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#e8eaed] mb-2">{project.title}</h3>
+                  <p className="text-[#a8aeb5] text-sm mb-4">{project.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tecnologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 bg-[#252d36] text-[#00d4ff] rounded text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-3">
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={project.codeLink}
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-[#252d36] text-[#e8eaed] rounded hover:bg-[#00d4ff] hover:text-[#0f1419] transition-all duration-300 text-sm font-medium"
+                    >
+                      <FiGithub size={16} /> GitHub
+                    </Link>
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={project.demoLink}
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-[#00d4ff] text-[#0f1419] rounded hover:shadow-lg hover:shadow-[#00d4ff]/50 transition-all duration-300 text-sm font-medium"
+                    >
+                      <FiExternalLink size={16} /> Demo
+                    </Link>
+                  </div>
+                </div>
               </div>
+            ))}
+          </div>
 
-            </div>
-          ))}
+          <div className="mt-12 text-center">
+            <button 
+            className="px-8 py-3 border-2 border-[#1e88e5] text-[#1e88e5] font-semibold rounded-lg hover:bg-[#1e88e5] hover:text-[#0f1419] transition-all duration-300"
+            onClick={() => setShowAll(!showAll)}
+            >
+              Carregar mais projetos
+            </button>
+          </div>
         </div>
-      </motion.div>
-       <button
-          className="bg-[var(--card)] text-white font-semibold flex items-center gap-3 px-8 py-2 rounded-md border-1 border-[var(--accent)] hover:bg-[rgba(30,41,59,0.3)] hover:opacity-90 hover:text-[var(--primary)] transition-colors duration-300 justify-center cursor-pointer mt-6 mb-10"
-          onClick={() => setShowAll(!showAll)}>
-            { showAll ? "Carregar menos projetos" : "Carregar mais projetos" }
-          </button>
-        </section>
+      </section>
     )
 }
