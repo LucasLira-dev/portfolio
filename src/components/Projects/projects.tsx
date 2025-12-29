@@ -128,7 +128,7 @@ export const Projects = () => {
             className="px-8 py-3 border-2 border-[#1e88e5] text-[#1e88e5] font-semibold rounded-lg hover:bg-[#1e88e5] hover:text-[#0f1419] transition-all duration-300"
             onClick={() => setShowAll(!showAll)}
             >
-              Carregar mais projetos
+              {showAll ? 'Mostrar Menos' : 'Mostrar Mais'}
             </button>
           </div>
         </div>
